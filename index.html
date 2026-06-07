@@ -466,8 +466,7 @@
   .reveal-delay-5 { transition-delay: 0.5s; }
   .reveal-delay-6 { transition-delay: 0.6s; }
 
-  /* ── PARALLAX PHOTO ── */
-  .hero-photo img { will-change: transform; transition: transform 0.1s linear; }
+
 
   /* ── CURSOR GLOW ── */
   .cursor-glow {
@@ -701,15 +700,7 @@ document.addEventListener('DOMContentLoaded', function () {
     counterIO.observe(el);
   });
 
-  /* ── PARALLAX ON HERO PHOTO ── */
-  const heroImg = document.querySelector('.hero-photo img');
-  if (heroImg) {
-    function onParallax() {
-      heroImg.style.transform = `translateY(${window.scrollY * 0.18}px) scale(1.05)`;
-    }
-    window.addEventListener('scroll', onParallax, { passive: true });
-    onParallax();
-  }
+
 
   /* ── HERO H1 REVEAL ON LOAD ── */
   const heroH1 = document.querySelector('.hero h1');
